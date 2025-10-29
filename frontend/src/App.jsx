@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+// React 17+ JSX runtime doesn't require React in scope; unused hooks removed
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { AuthProvider, useAuth } from './contexts/AuthContext'
 import Login from './components/Login'
