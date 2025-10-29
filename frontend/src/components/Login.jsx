@@ -59,7 +59,7 @@ function Login() {
           </button>
         </form>
         <div className="auth-switch">
-          Don't have an account? <Link to="/register">Register here</Link>
+          Don&apos;t have an account? <Link to="/register">Register here</Link>
         </div>
       </div>
     </div>
