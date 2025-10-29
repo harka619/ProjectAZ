@@ -3,7 +3,7 @@
 A full-stack web application for managing personal tasks with user authentication, built with Node.js, React, and PostgreSQL.
 
 ## Features
-
+- *** hi i am trying 
 - **User Authentication**: Secure registration and login with JWT tokens
 - **Task Management**: Create, read, update, and delete tasks
 - **Task Status**: Mark tasks as pending or completed
