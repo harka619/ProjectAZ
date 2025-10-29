@@ -1,12 +1,12 @@
 import jwt from 'jsonwebtoken'
 import { User } from '../models/User.js'
 
-function createToken(userId) {
+function createToken (userId) {
   const secret = process.env.JWT_SECRET || 'dev_secret'
   return jwt.sign({ sub: userId }, secret, { expiresIn: '7d' })
 }
 
-export async function register(req, res) {
+export async function register (req, res) {
   const { email, password } = req.body
   if (!email || !password) return res.status(400).json({ message: 'Email and password required' })
   const existing = await User.findOne({ where: { email } })
@@ -17,7 +17,7 @@ export async function register(req, res) {
   res.status(201).json({ token, user: { id: user.id, email: user.email } })
 }
 
-export async function login(req, res) {
+export async function login (req, res) {
   const { email, password } = req.body
   if (!email || !password) return res.status(400).json({ message: 'Email and password required' })
   const user = await User.findOne({ where: { email } })
@@ -28,10 +28,8 @@ export async function login(req, res) {
   res.json({ token, user: { id: user.id, email: user.email } })
 }
 
-export async function verifyToken(req, res) {
+export async function verifyToken (req, res) {
   const user = await User.findByPk(req.userId)
   if (!user) return res.status(404).json({ message: 'User not found' })
   res.json({ id: user.id, email: user.email })
 }
-
-

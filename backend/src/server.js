@@ -1,12 +1,12 @@
 import dotenv from 'dotenv'
-dotenv.config()
 
 import app from './app.js'
 import { connectDb } from './config/db.js'
+dotenv.config()
 
 const port = process.env.PORT || 5000
 
-async function start() {
+async function start () {
   await connectDb()
   app.listen(port, () => {
     // eslint-disable-next-line no-console
@@ -19,5 +19,3 @@ start().catch((err) => {
   console.error('Failed to start server', err)
   process.exit(1)
 })
-
-

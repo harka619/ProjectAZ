@@ -9,5 +9,3 @@ router.post('/login', login)
 router.get('/verify', authRequired, verifyToken)
 
 export default router
-
-

@@ -34,5 +34,3 @@ const Task = sequelize.define('Task', {
 })
 
 export { Task }
-
-

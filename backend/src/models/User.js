@@ -48,5 +48,3 @@ User.hashPassword = async function (password) {
 }
 
 export { User }
-
-
