@@ -8,5 +8,3 @@ describe('Smoke Test', () => {
     expect(res.body).toEqual({ status: 'ok' })
   })
 })
-
-
